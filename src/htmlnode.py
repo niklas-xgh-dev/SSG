@@ -16,14 +16,4 @@ class HTMLNode:
         return f" {props_html}"
     
     def __repr__(self):
-        attributes = []
-        if self.tag is not None:
-            attributes.append(f"Tag:{self.tag}")
-        if self.value is not None:
-            attributes.append(f"value:{self.value}")
-        if self.children is not None:
-            attributes.append(f"children:{self.children}")
-        if self.props is not None:
-            attributes.append(f"props:{self.props}")
-        
-        return " ".join(attributes)
+        return f"HTMLNode({self.tag}, {self.value}, children: {self.children}, {self.props})"
